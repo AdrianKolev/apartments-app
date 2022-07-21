@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {ReactComponent as ArrowRightIcon} from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg"
+import {toast} from "react-toastify";
 
 
 function SignIn() {
@@ -37,10 +38,10 @@ function SignIn() {
             const userCredentials = await signInWithEmailAndPassword(auth, email, password);
             //if there is such a user redirect to profile page
             if(userCredentials.user) {
-                navigate('/profile')
+                navigate('/')
             }
         } catch (error) {
-            console.log(error);
+            toast.error('Bad user credentials')
         }
 
     }
