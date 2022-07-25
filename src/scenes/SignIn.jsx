@@ -4,6 +4,7 @@ import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {ReactComponent as ArrowRightIcon} from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg"
 import {toast} from "react-toastify";
+import OAuth from "../components/OAuth";
 
 
 function SignIn() {
@@ -96,7 +97,10 @@ function SignIn() {
                             </button>
                         </div>
                     </form>
-                    <Link to='/sign-up' className='registerLink'>Sign up if you are not already registered!</Link>
+                    <OAuth />
+                    <div>
+                        <Link to='/sign-up' className='registerLink'>Sign up if you are not already registered!</Link>
+                    </div>
                 </main>
             </div>
         </>

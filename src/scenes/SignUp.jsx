@@ -1,12 +1,12 @@
 import {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
+import {createUserWithEmailAndPassword, getAuth, updateProfile} from 'firebase/auth'
 import {db} from '../firebase.config';
-import {setDoc, doc, serverTimestamp} from 'firebase/firestore';
+import {doc, serverTimestamp, setDoc} from 'firebase/firestore';
 import {ReactComponent as ArrowRightIcon} from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg"
 import {toast} from "react-toastify";
-
+import OAuth from "../components/OAuth";
 
 function SignUp() {
 
@@ -116,12 +116,14 @@ function SignUp() {
                                 Sign Up
                             </p>
                             <button className="signUpButton">
-                                <ArrowRightIcon fill="#ffffff" width='34px' height='34px' />
+                                <ArrowRightIcon fill="#ffffff" width='34px' height='34px'/>
                             </button>
                         </div>
                     </form>
-
-                    <Link to='/sign-in' className='registerLink'>Sign in if you registered!</Link>
+                    <OAuth/>
+                    <div>
+                        <Link to='/sign-in' className='registerLink'>Sign in if you registered!</Link>
+                    </div>
                 </main>
             </div>
         </>
