@@ -10,6 +10,7 @@ import SignIn from "./scenes/SignIn";
 import SignUp from "./scenes/SignUp";
 import Category from "./scenes/Category";
 import ForgotPassword from "./scenes/ForgotPassword";
+import CreateListing from "./scenes/CreateListing";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                     <Route path='/sign-in' element={<SignIn/>}/>
                     <Route path='/sign-up' element={<SignUp/>}/>
                     <Route path='/forgot-password' element={<ForgotPassword/>}/>
+                    <Route path='/create-listing' element={<CreateListing/>}/>
                 </Routes>
                 <NavBar/>
             </Router>
