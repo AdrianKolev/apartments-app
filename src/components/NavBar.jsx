@@ -23,7 +23,7 @@ function NavBar() {
                     </li>
                     <li className='navbarListItem' onClick={() => navigate('/sellers')}>
                         <SellersIcon fill={activeNavBarElement('/sellers') ? '#2c2c2c' : '#8f8f8f'} width='36px' height='36px'/>
-                        <p className={activeNavBarElement('/sellers') ? 'navbarListItemNameActive' : 'navbarListItemName' }>Sellers</p>
+                        <p className={activeNavBarElement('/sellers') ? 'navbarListItemNameActive' : 'navbarListItemName' }>Offers</p>
                     </li>
                     <li className='navbarListItem' onClick={() => navigate('/profile')}>
                         <PersonOutlineIcon fill={activeNavBarElement('/profile') ? '#2c2c2c' : '#8f8f8f'} width='36px' height='36px'/>
