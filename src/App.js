@@ -11,7 +11,8 @@ import SignUp from "./scenes/SignUp";
 import Category from "./scenes/Category";
 import ForgotPassword from "./scenes/ForgotPassword";
 import CreateListing from "./scenes/CreateListing";
-
+import Listing from "./scenes/Listing";
+import Contact from "./scenes/Contact";
 
 function App() {
     return (
@@ -28,6 +29,8 @@ function App() {
                     <Route path='/sign-up' element={<SignUp/>}/>
                     <Route path='/forgot-password' element={<ForgotPassword/>}/>
                     <Route path='/create-listing' element={<CreateListing/>}/>
+                    <Route path='/category/:categoryName/:listingId' element={<Listing/>}/>
+                    <Route path='/contact/:listingOwnerId' element={<Contact/>}/>
                 </Routes>
                 <NavBar/>
             </Router>
